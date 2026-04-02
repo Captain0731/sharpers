@@ -277,3 +277,93 @@ $border-light: rgba(24, 72, 151, 0.08);
     }
   }
 }
+
+@media (max-width: 900px) {
+  .dinner {
+    padding: 5rem 1.25rem 3.5rem;
+
+    &__hero {
+      margin-bottom: 2.4rem;
+      padding-bottom: 2.2rem;
+
+      &-title {
+        margin: 2.3rem 0 1rem 0;
+        font-size: clamp(2.2rem, 10.5vw, 3.2rem);
+      }
+
+      &-desc {
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      &-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 0.95rem 1.3rem;
+      }
+    }
+
+    &__section-title {
+      font-size: 1.35rem;
+      margin-bottom: 1.2rem;
+    }
+
+    &__seating {
+      margin-bottom: 3rem;
+
+      &-search {
+        gap: 0.6rem;
+      }
+
+      &-btn {
+        width: 100%;
+        padding: 0 1rem;
+      }
+
+      &-result {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.8rem 1rem;
+      }
+    }
+
+    &__menu {
+      margin-bottom: 2rem;
+
+      &-grid {
+        gap: 1.2rem;
+      }
+
+      &-card {
+        padding: 1.1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .dinner {
+    padding: 4.5rem 1rem 3rem;
+
+    &__seating {
+      &-result {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
+    }
+
+    &__menu {
+      &-card {
+        &-title {
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+        }
+
+        &-name {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+}

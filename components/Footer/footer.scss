@@ -25,7 +25,8 @@
     }
 
 	&__container {
-		max-width: 98%;
+		max-width: 1400px;
+		width: 100%;
 		margin: 0 auto;
 		position: relative;
 	}
@@ -244,5 +245,66 @@
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
 		color: rgba(255, 255, 255, 0.573);
+	}
+}
+
+@media (max-width: 900px) {
+	.footer {
+		padding: 3.75rem 1.25rem 1.5rem;
+
+		&__grid {
+			margin-bottom: 2rem;
+		}
+
+		&__bottom {
+			position: static;
+			margin-top: 1rem;
+			opacity: 0.8;
+		}
+
+		&__watermark-logo {
+			margin-right: 0;
+			opacity: 0.16;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.footer {
+		padding: 3rem 1rem 1.2rem;
+
+		&__column {
+			gap: 1rem;
+		}
+
+		&__description,
+		&__newsletter-desc {
+			font-size: 0.88rem;
+			line-height: 1.6;
+		}
+
+		&__form-group {
+			flex-direction: column;
+			border-radius: 16px;
+			padding: 0.65rem;
+		}
+
+		&__submit {
+			width: 100%;
+			padding: 0.72rem 1rem;
+		}
+
+		&__title {
+			font-size: 1rem;
+		}
+
+		&__links {
+			gap: 0.7rem;
+		}
+
+		&__social-link {
+			width: 36px;
+			height: 36px;
+		}
 	}
 }

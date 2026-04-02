@@ -4,9 +4,28 @@
   box-sizing: border-box;
 }
 
-/* body {
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
   background-color: #fdfdfd;
-  color: #0A133C;
-} */
+  color: #0a133c;
+  line-height: 1.5;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  width: 100%;
+}
 
 

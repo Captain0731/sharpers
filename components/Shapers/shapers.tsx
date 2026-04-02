@@ -103,7 +103,7 @@ const Shapers: React.FC = () => {
 
         {/* Grid */}
         <div className="shapers__grid">
-          {SHAPERS.map((shaper, idx) => (
+          {SHAPERS.map((shaper) => (
             <div className="shaper-card" key={shaper.id}>
               {/* Image Placeholder - since we don't have the real photos */}
               <div 

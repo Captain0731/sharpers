@@ -29,8 +29,8 @@ const Reachout = () => {
 					<div className="reachout__hero-text">
 						<h1 className="reachout__hero-title">Reach Out</h1>
 						<p className="reachout__hero-desc">
-							Have a question or want to collaborate? We'd love to hear from you.
-							Send us a message and we'll get back to you as soon as possible.
+							Have a question or want to collaborate? We&apos;d love to hear from you.
+							Send us a message and we&apos;ll get back to you as soon as possible.
 						</p>
 					</div>
 				</div>

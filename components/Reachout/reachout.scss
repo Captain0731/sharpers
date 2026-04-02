@@ -193,3 +193,76 @@
 		}
 	}
 }
+
+@media (max-width: 900px) {
+	.reachout {
+		padding: 5rem 1.25rem 3.5rem;
+
+		&__hero {
+			margin-bottom: 2.2rem;
+			padding-bottom: 2rem;
+
+			&-title {
+				margin: 2.3rem 0 1rem 0;
+				font-size: clamp(2.2rem, 10.5vw, 3.2rem);
+			}
+
+			&-desc {
+				font-size: 1rem;
+				line-height: 1.65;
+			}
+		}
+
+		&__content {
+			gap: 2rem;
+		}
+
+		&__info {
+			&-card {
+				padding: 1rem;
+			}
+
+			&-icon {
+				width: 42px;
+				height: 42px;
+			}
+		}
+
+		&__form-wrap {
+			padding: 1.25rem;
+			border-radius: 16px;
+		}
+
+		&__form {
+			gap: 1rem;
+
+			&-submit {
+				width: 100%;
+				padding: 0.9rem 1rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 560px) {
+	.reachout {
+		padding: 4.5rem 1rem 3rem;
+
+		&__info {
+			&-card {
+				align-items: flex-start;
+				gap: 0.8rem;
+			}
+		}
+
+		&__form {
+			&-group {
+				input,
+				textarea {
+					padding: 0.8rem 1rem;
+					font-size: 0.92rem;
+				}
+			}
+		}
+	}
+}

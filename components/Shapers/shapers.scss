@@ -355,3 +355,94 @@
     letter-spacing: 0.05em;
   }
 }
+
+@media (max-width: 900px) {
+  .shapers {
+    padding: 5rem 1.25rem 3.5rem;
+
+    &__hero {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.2rem;
+
+      &-title {
+        margin: 2.4rem 0 0.9rem 0;
+        font-size: clamp(2.3rem, 11vw, 3.4rem);
+      }
+
+      &-desc {
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      &-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.95rem 1.2rem;
+      }
+    }
+
+    &__filters-bar {
+      gap: 0.8rem;
+      margin-bottom: 2rem;
+    }
+
+    &__dropdowns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55rem;
+    }
+
+    &__dropdown-wrap {
+      width: 100%;
+    }
+
+    &__dropdown-btn {
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 0.9rem;
+    }
+
+    &__dropdown-menu {
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 1.35rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .shapers {
+    padding: 4.5rem 1rem 3rem;
+
+    &__dropdowns {
+      grid-template-columns: 1fr;
+    }
+
+    &__sort {
+      width: 100%;
+      justify-content: space-between;
+      padding: 0.2rem 0.1rem;
+    }
+
+    &__grid {
+      gap: 1.2rem;
+    }
+  }
+
+  .shaper-card {
+    &__content {
+      padding: 1.1rem;
+    }
+
+    &__name {
+      font-size: 1.1rem;
+    }
+
+    &__role {
+      font-size: 0.9rem;
+    }
+  }
+}
