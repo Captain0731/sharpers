@@ -1,0 +1,248 @@
+
+
+
+.footer {
+	background-color: #0A133C;
+	color: #ffffff;
+	padding: 5rem 2rem 2rem;
+	font-family: var(--font-geist-sans), sans-serif;
+	border-top: 1px solid rgba(0, 101, 242, 0.1);
+	position: relative;
+	overflow: hidden;
+
+
+	 &__logo {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+	 }
+
+    &-image {
+      width: clamp(180px, 12vw, 300px);
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+	&__container {
+		max-width: 98%;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+		gap: 4rem;
+		margin-bottom: 4rem;
+		position: relative;
+		z-index: 2;
+
+		@media (max-width: 1024px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 3rem;
+		}
+
+		@media (max-width: 600px) {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+		}
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		&--brand {
+			max-width: 380px;
+		}
+
+		&--newsletter {
+			@media (min-width: 1025px) {
+				padding-left: 2rem;
+			}
+		}
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+
+		&-icon {
+			font-size: 1.5rem;
+		}
+
+		&-text {
+			font-size: 1.5rem;
+			font-weight: 800;
+			letter-spacing: -0.02em;
+			background: linear-gradient(135deg, #ffffff, #0065F2);
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+		}
+	}
+
+	&__description {
+		font-size: 0.95rem;
+		line-height: 1.8;
+		color: rgba(255, 255, 255, 0.7);
+		margin: 0;
+	}
+
+	&__socials {
+		display: flex;
+		gap: 1rem;
+	}
+
+	&__social-link {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 12px;
+		color: #ffffff;
+		transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+		&:hover {
+			background: #0065F2;
+			color: #ffffff;
+			transform: translateY(-4px);
+			box-shadow: 0 8px 20px -4px rgba(0, 101, 242, 0.4);
+		}
+	}
+
+	&__title {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: #ffffff;
+		margin: 0 0 0.5rem 0;
+		position: relative;
+		
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -0.5rem;
+			width: 30px;
+			height: 2px;
+			background: #0065F2;
+			border-radius: 10px;
+		}
+	}
+
+	&__links {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.875rem;
+
+		li a {
+			font-size: 0.95rem;
+			color: rgba(255, 255, 255, 0.6);
+			text-decoration: none;
+			transition: all 0.2s ease;
+
+			&:hover {
+				color: #0065F2;
+				padding-left: 5px;
+			}
+		}
+	}
+
+	&__newsletter-desc {
+		font-size: 0.9rem;
+		color: rgba(255, 255, 255, 0.7);
+		margin: 0;
+	}
+
+	&__form {
+		width: 100%;
+	}
+
+	&__form-group {
+		display: flex;
+		gap: 0.75rem;
+		background: rgba(255, 255, 255, 0.05);
+		padding: 0.5rem;
+		border-radius: 100px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		transition: all 0.2s ease;
+
+		&:focus-within {
+			border-color: #0065F2;
+			background: rgba(255, 255, 255, 0.08);
+			box-shadow: 0 0 0 4px rgba(0, 101, 242, 0.1);
+		}
+	}
+
+	&__input {
+		flex: 1;
+		background: transparent;
+		border: none;
+		padding: 0.5rem 1rem;
+		color: #ffffff;
+		font-size: 0.9rem;
+		outline: none;
+
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.3);
+		}
+	}
+
+	&__submit {
+		background: #0065F2;
+		color: #ffffff;
+		border: none;
+		padding: 0.75rem 1.5rem;
+		border-radius: 100px;
+		font-size: 0.9rem;
+		font-weight: 700;
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: #184897;
+			transform: scale(1.02);
+		}
+	}
+
+	&__bottom {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.35rem;
+		text-align: center;
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	&__watermark-logo {
+		width: clamp(120px, 22vw, 200px);
+		height: auto;
+		display: block;
+		opacity: 0.12;
+		margin-right: 210px;
+		filter: grayscale(0.1);
+		pointer-events: none;
+		user-select: none;
+	}
+
+	&__brand-name {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 700;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.573);
+	}
+}

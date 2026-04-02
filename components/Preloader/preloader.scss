@@ -1,0 +1,143 @@
+.preloaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f1e8 0%, #e8e0d5 100%);
+  z-index: 9999;
+  animation: fadeOut 0.6s ease-in-out 2.4s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.preloaderContentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  pointer-events: none;
+}
+
+.logoWrapperBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+
+.logoBorderBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  
+  /* Outer rotating border */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: rgba(168, 145, 115, 0.6);
+    border-right-color: rgba(168, 145, 115, 0.2);
+    animation: rotateBorderOuter 3s linear infinite reverse;
+  }
+  
+  /* Inner rotating border */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border-radius: 50%;
+    border: 1.5px solid transparent;
+    border-top-color: rgba(168, 145, 115, 0.9);
+    border-right-color: rgba(168, 145, 115, 0.1);
+    animation: rotateBorderInner 2s linear infinite;
+  }
+  
+  img {
+    position: relative;
+    z-index: 2;
+    animation: pulseScale 2s ease-in-out infinite;
+  }
+}
+
+@keyframes rotateBorderOuter {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateBorderInner {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.98);
+    opacity: 0.8;
+  }
+}
+
+.loadingText {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: rgba(168, 145, 115, 0.8);
+  text-transform: uppercase;
+  animation: fadeInText 0.8s ease-out 0.3s backwards;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logoWrapperBox {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .loadingText {
+    font-size: 0.75rem;
+  }
+}
